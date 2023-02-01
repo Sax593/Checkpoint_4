@@ -9,6 +9,7 @@ export default styled.article`
   margin: 2rem;
   padding: 1rem;
   text-align: center;
+  opacity: 0.9;
   .itemPicture {
     margin: auto;
     height: 18vh;
