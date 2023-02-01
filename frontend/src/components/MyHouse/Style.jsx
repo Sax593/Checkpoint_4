@@ -5,5 +5,5 @@ export default styled.section`
   background-image: url(${image});
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 90vw;
+  height: 100vh;
 `;
