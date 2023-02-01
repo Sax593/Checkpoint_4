@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.section`
-  max-width: 15vw;
+  width: 15vw;
   min-height: 100vh;
   background-color: aqua;
   padding: 2rem 0.5rem;
