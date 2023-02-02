@@ -1,16 +1,13 @@
-import BlueFish from "@assets/blueFish.png";
+import propTypes from "prop-types";
 
 import Style from "./Style";
 
-export default function ItemCard() {
+export default function ItemCard({ itemData }) {
   return (
     <Style>
-      <img className="itemPicture" src={BlueFish} alt="item pictures" />
+      <img className="itemPicture" src={itemData.picture} alt={itemData.name} />
       <div className="info">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-          temporibus veniam! Ab, aut provident.
-        </p>
+        <p>{itemData.description}</p>
         <button className="addButton" type="button">
           Ajouter
         </button>
@@ -18,3 +15,11 @@ export default function ItemCard() {
     </Style>
   );
 }
+
+ItemCard.propTypes = {
+  itemData: propTypes.shape({
+    picture: propTypes.string.isRequired,
+    name: propTypes.string.isRequired,
+    description: propTypes.string.isRequired,
+  }).isRequired,
+};
