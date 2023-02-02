@@ -14,13 +14,9 @@ const browse = (req, res) => {
 
 const read = (req, res) => {
   models.possession
-    .find(req.params.id)
+    .findByUsersId(req.params.id)
     .then(([rows]) => {
-      if (rows[0] == null) {
-        res.sendStatus(404);
-      } else {
-        res.send(rows[0]);
-      }
+      res.send(rows);
     })
     .catch((err) => {
       console.error(err);

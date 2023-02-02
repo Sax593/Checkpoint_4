@@ -6,9 +6,11 @@ import Style from "./Style";
 export default function MyInventory() {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_BACKEND_URL}/items`).then(({ data }) => {
-      setItems(data);
-    });
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/possession/1`)
+      .then(({ data }) => {
+        setItems(data);
+      });
   }, []);
   return (
     <Style>
