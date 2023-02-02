@@ -1,4 +1,4 @@
-import ItemCard from "@components/ItemCard/ItemCard";
+import ItemView from "@components/ItemView/ItemView";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Style from "./Style";
@@ -15,7 +15,7 @@ export default function MyInventory() {
   return (
     <Style>
       {items.map((element) => {
-        return <ItemCard key={element.id} itemData={element} />;
+        return <ItemView key={element.id} itemData={element} />;
       })}
     </Style>
   );
